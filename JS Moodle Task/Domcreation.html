@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Creation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        *
+        {
+            text-align : center;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        //1. Create an new div with createElement
+        var newDiv = document.createElement("div");
+        newDiv.style.backgroundColor = "skyblue";
+
+        //2. Create an text(Login Page) with create TextNode
+        //this newtag4text is extra variable
+        var newTag4Text = document.createElement("h1");
+        var text = document.createTextNode("Hai, this is a textnode");
+
+        //3. create an input box with createElement
+        var newInput = document.createElement("input");
+
+        //4. create an button with createElement
+        var newButton = document.createElement("button");
+
+        //5.create an button text(Click) with create Textnode
+        var buttonText = document.createTextNode("Click");
+
+        //6. append the button text with button element
+        newButton.appendChild(buttonText);
+
+        //7. append the text with div element
+        newTag4Text.appendChild(text);
+        newDiv.appendChild(newTag4Text);
+
+        //8. Append the input with div element
+        newDiv.appendChild(newInput);
+
+        //9. append the button with div element
+        newDiv.appendChild(newButton); 
+
+        //10. append the div with the document body
+        document.body.appendChild(newDiv);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password validation</title>
+</head>
+<body>
+    <input type="password" id="password" placeholder="Password">
+    <input type="button" onclick="check()" value="check">
+    <script>
+        function check(){
+            var a = document.getElementById("password").value;
+            var b = /^[\w]{8,10}$/
+            if (b.test(a)){
+                alert("password is valid");
+                return true;
+            }
+            else{
+                alert("password is not valid");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

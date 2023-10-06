@@ -1,0 +1,19 @@
+.main{
+   height:100vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.Spark{
+    color: rgb(6, 6, 101);
+}
+.Redeem{
+    color: aliceblue;
+}
+.field-icon {
+    float: right;
+    margin-left: -60px;
+    margin-top: 6px;
+    position: relative;
+    z-index: 20;
+  }

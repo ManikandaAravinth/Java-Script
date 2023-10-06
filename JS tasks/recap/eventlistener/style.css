@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .image-container {
+    position: relative;
+  }
+  
+  #zoom-image {
+    transition: transform 2s ease;
+    cursor: zoom-in;
+    height: 250px;
+  }
+  
+  #zoom-image.zoomed {
+    transform: scale(1.5);
+    cursor: default;
+  }
+  

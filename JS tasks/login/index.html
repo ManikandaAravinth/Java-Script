@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <label>User Name</label>
+        <input type="text" id="Uname" name="Uname" value="" placeholder="Enter a Name" onkeyup="validation()"/>
+        <span id="spn1">***</span>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="text" id="psw" name="psw" value="" placeholder="Enter the passw0rd" onkeyup="validate()" />
+        <span id="spn2">***</span>
+    </div>
+    <div>
+        <input type="submit" value="Login" onclick="check()"/>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    
+</body>
+</html>

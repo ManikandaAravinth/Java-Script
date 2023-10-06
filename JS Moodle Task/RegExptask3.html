@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile number validation</title>
+</head>
+<body>
+    <input type="number" id="num" placeholder="mobile">
+    <input type="button" onclick="checking()" value="check">
+    <script>
+       function checking(){
+        var a = document.getElementById("num").value;;
+        //alert(a)
+        var regEX=/^[6-9]{1}[0-9]{9}/
+        if(regEX.test(a) && a.length == 10){
+            
+            alert("Valid Mobile Number")
+        }
+        else{
+            console.log(a)
+
+            alert("Invalid Mobile Number")
+        }
+       }            
+    </script>    
+</body>
+</html>

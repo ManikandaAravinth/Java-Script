@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        input{
+            width: 4vw;
+            height: 7vh;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container-fluid bg-dark subtle min-vh-100">
+        <section class="row d-flex justify-content-evenly">
+            <div class="col-12 text-center my-5">
+                <h1 class="lite text-light">Traffic Light</h1>
+            </div>
+            <div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-evenly">
+                <button class="btn bg-secondary text-white text-center my-2 px-3" id="stopButton">Stop</button>
+                <button class="btn bg-secondary text-white text-center my-2 px-3" id="readyButton" onclick="readyButton()">Ready</button>
+                <button class="btn bg-secondary text-white text-center my-2 px-3" id="goButton" onclick="goButton()">Go</button>
+            </div>
+            <div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-evenly">
+                <div class="bg-secondary rounded-5 px-3 d-flex flex-column">
+                    <input class="bg-black rounded-circle border-0 my-2" id="stopLight"></input>
+                    <input class="bg-black rounded-circle border-0 my-2" id="readyLight"></input>
+                    <input class="bg-black rounded-circle border-0 my-2" id="goLight"></input>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <script>
+        document.getElementById("stopButton").addEventListener('click', function() 
+        {
+            var stopButton = document.getElementById("stopButton");
+            var inputRed = document.getElementById("stopLight");
+            var currentClassBt = stopButton.getAttribute("class");
+            var currentClassIn = inputRed.getAttribute("class");
+            var changeClassBt = currentClassBt.replace("bg-secondary","bg-danger");
+            var changeClassIn = currentClassIn.replace("bg-black","bg-danger");
+            stopButton.setAttribute("class", changeClassBt);
+            inputRed.setAttribute("class", changeClassIn);
+
+            var readyBt = document.getElementById("readyButton");
+            var readyBtSig = document.getElementById("readyLight");
+            var readyGetClass = readyBt.getAttribute('class');
+            var readyGetClassSig = readyBtSig.getAttribute('class');
+            var readyReplace = readyGetClass.replace('bg-warning','bg-secondary');
+            var readyReplaceSig = readyGetClassSig.replace('bg-warning','bg-black');
+            readyBt.setAttribute('class',readyReplace);
+            readyBtSig.setAttribute('class',readyReplaceSig);
+
+
+            var goBt = document.getElementById("goButton");
+            var goBtSig = document.getElementById("goLight");
+            var goGetClass = goBt.getAttribute('class');
+            var goGetClassSig = goBtSig.getAttribute('class');
+            var goReplace = goGetClass.replace('bg-success','bg-secondary');
+            var goReplaceSig = goGetClassSig.replace('bg-success','bg-black');
+            goBt.setAttribute('class',goReplace);
+            goBtSig.setAttribute('class',goReplaceSig);
+
+        }
+        );
+
+
+        function readyButton()
+        {
+            var stopButton = document.getElementById("stopButton");
+            var inputRed = document.getElementById("stopLight");
+            var currentClassBt = stopButton.getAttribute("class");
+            var currentClassIn = inputRed.getAttribute("class");
+            var changeClassBt = currentClassBt.replace("bg-danger","bg-secondary");
+            var changeClassIn = currentClassIn.replace("bg-danger","bg-black");
+            stopButton.setAttribute("class", changeClassBt);
+            inputRed.setAttribute("class", changeClassIn);
+
+
+            var readyBt = document.getElementById("readyButton");
+            var readyBtSig = document.getElementById("readyLight");
+            var readyGetClass = readyBt.getAttribute('class');
+            var readyGetClassSig = readyBtSig.getAttribute('class');
+            var readyReplace = readyGetClass.replace('bg-secondary', 'bg-warning');
+            var readyReplaceSig = readyGetClassSig.replace('bg-black', 'bg-warning');
+            readyBt.setAttribute('class',readyReplace);
+            readyBtSig.setAttribute('class',readyReplaceSig);
+
+
+            var goBt = document.getElementById("goButton");
+            var goBtSig = document.getElementById("goLight");
+            var goGetClass = goBt.getAttribute('class');
+            var goGetClassSig = goBtSig.getAttribute('class');
+            var goReplace = goGetClass.replace('bg-success','bg-secondary');
+            var goReplaceSig = goGetClassSig.replace('bg-success','bg-black');
+            goBt.setAttribute('class',goReplace);
+            goBtSig.setAttribute('class',goReplaceSig);
+        }
+
+        function goButton()
+        {
+            var goBt = document.getElementById("goButton");
+            var goBtSig = document.getElementById("goLight");
+            var goGetClass = goBt.getAttribute('class');
+            var goGetClassSig = goBtSig.getAttribute('class');
+            var goReplace = goGetClass.replace('bg-secondary', 'bg-success');
+            var goReplaceSig = goGetClassSig.replace('bg-black', 'bg-success');
+            goBt.setAttribute('class',goReplace);
+            goBtSig.setAttribute('class',goReplaceSig);
+
+            var readyBt = document.getElementById("readyButton");
+            var readyBtSig = document.getElementById("readyLight");
+            var readyGetClass = readyBt.getAttribute('class');
+            var readyGetClassSig = readyBtSig.getAttribute('class');
+            var readyReplace = readyGetClass.replace('bg-warning','bg-secondary');
+            var readyReplaceSig = readyGetClassSig.replace('bg-warning','bg-black');
+            readyBt.setAttribute('class',readyReplace);
+            readyBtSig.setAttribute('class',readyReplaceSig);
+
+            var stopButton = document.getElementById("stopButton");
+            var inputRed = document.getElementById("stopLight");
+            var currentClassBt = stopButton.getAttribute("class");
+            var currentClassIn = inputRed.getAttribute("class");
+            var changeClassBt = currentClassBt.replace("bg-danger","bg-secondary");
+            var changeClassIn = currentClassIn.replace("bg-danger","bg-black");
+            stopButton.setAttribute("class", changeClassBt);
+            inputRed.setAttribute("class", changeClassIn);
+        }
+
+    </script>
+
+</body>
+</html>

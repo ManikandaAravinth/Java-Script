@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User name validation</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Username">
+    <input type="button" onclick="check()" value="check">
+
+    <script>
+        function check(){
+        var a =document.getElementById("username").value;
+            var validate = /^[A-z0-9]+$/;
+            if(validate.test(a)){
+                alert("Username is valid");
+            }
+            else{
+                alert ("Username is not valid");
+            }
+        }
+    </script>
+</body>
+</html>
